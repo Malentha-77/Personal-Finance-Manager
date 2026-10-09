@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Salary",
+        "amount": 15000,
+        "type": "income"
+    },
+    {
+        "name": "Rent",
+        "amount": 5000,
+        "type": "expense"
+    },
+    {
+        "name": "Food",
+        "amount": 1200,
+        "type": "expense"
+    }
+]
