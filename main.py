@@ -14,3 +14,12 @@ def get_total_income(finances):
 
     return total
 
+def get_total_expenses(finances):
+    total = 0
+
+    for finance in finances:
+        if finance['type'] == "expense":
+            total += finance['amount']
+
+    return total
+
