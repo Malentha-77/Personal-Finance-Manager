@@ -29,3 +29,11 @@ def get_balance(finances):
 
     answer = income - expenses
     return answer
+
+def find_finance(finances, name):
+    for finance in finances:
+        if finance['name'] == name:
+            return finance
+
+    return None
+
