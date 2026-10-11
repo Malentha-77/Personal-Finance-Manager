@@ -47,3 +47,18 @@ def count_finances(finances, record_type):
 def show_finances(finances):
     for finance in finances:
         print(f"Name: {finance['name']}, Type: {finance['type']}, Amount: {finance['amount']}")
+
+def add_finance(finances):
+    name = input("Enter the name of the finance record: ")
+    record_type = input("Enter the type (income/expense): ")
+    amount = float(input("Enter the amount: "))
+
+    new_finance = {
+        "name": name,
+        "type": record_type,
+        "amount": amount
+    }
+
+    finances.append(new_finance)
+    print("Finance record added successfully.")
+    
