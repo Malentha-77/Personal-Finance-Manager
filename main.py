@@ -71,3 +71,8 @@ def remove_finance(finances, name):
     else:
         return False
 
+def save_finances(finances):
+    with open("finances.json", "w") as file:
+        json.dump(finances, file, indent=4)
+    print("Finances saved successfully.")
+
