@@ -23,3 +23,9 @@ def get_total_expenses(finances):
 
     return total
 
+def get_balance(finances):
+    income = get_total_income(finances)
+    expenses = get_total_expenses(finances)
+
+    answer = income - expenses
+    return answer
