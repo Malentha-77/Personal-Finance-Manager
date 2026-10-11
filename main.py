@@ -43,3 +43,7 @@ def count_finances(finances, record_type):
         if finance['type'] == record_type:
             count += 1
     return count
+
+def show_finances(finances):
+    for finance in finances:
+        print(f"Name: {finance['name']}, Type: {finance['type']}, Amount: {finance['amount']}")
