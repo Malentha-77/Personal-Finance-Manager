@@ -65,10 +65,10 @@ def add_finance(finances):
 
 def remove_finance(finances, name):
     finance_to_remove = find_finance(finances, name)
-    save_finances(finances)
-
+    
     if finance_to_remove:
         finances.remove(finance_to_remove)
+        save_finances(finances)
         return True
     else:
         return False
