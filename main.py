@@ -50,8 +50,27 @@ def show_finances(finances):
 
 def add_finance(finances):
     name = input("Enter the name of the finance record: ")
+    if not name.strip():
+        print("Name cannot be empty.")
+        return
+    
     record_type = input("Enter the type (income/expense): ")
-    amount = float(input("Enter the amount: "))
+    while record_type != "income" and record_type != "expense":
+        print("Invalid type. Please enter 'income' or 'expense'.")
+        record_type = input("Enter the type (income/expense): ")
+
+    while True:
+        try:
+            amount = float(input("Enter the amount: "))
+
+            if amount <= 0:
+                print("Amount must be a positive number.")
+                continue
+
+            break
+
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
 
     new_finance = {
         "name": name,
