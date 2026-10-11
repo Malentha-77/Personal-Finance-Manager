@@ -61,4 +61,13 @@ def add_finance(finances):
 
     finances.append(new_finance)
     print("Finance record added successfully.")
-    
+
+def remove_finance(finances, name):
+    finance_to_remove = find_finance(finances, name)
+
+    if finance_to_remove:
+        finances.remove(finance_to_remove)
+        return True
+    else:
+        return False
+
