@@ -97,7 +97,7 @@ def save_finances(finances):
         json.dump(finances, file, indent=4)
     print("Finances saved successfully.")
 
-def menu():
+def menu(finances):
     choice = ""
     while choice != "8":
         print("\n=== Personal Finance Management Menu ===")
@@ -135,17 +135,19 @@ def menu():
 
         elif choice == "5":
             total_income = get_total_income(finances)
-            print(f"Total income: ${total_income}")
+            print(f"Total income: R{total_income}")
 
         elif choice == "6":
             total_expenses = get_total_expenses(finances)
-            print(f"Total expenses: ${total_expenses}")
+            print(f"Total expenses: R{total_expenses}")
 
         elif choice == "7":
             balance = get_balance(finances)
-            print(f"Balance: ${balance}")
+            print(f"Balance: R{balance}")
 
         elif choice == "8":
             print("Exited...")
         else:
             print("Invalid choice. Please enter a number between 1 and 8.")
+
+menu(finances)
