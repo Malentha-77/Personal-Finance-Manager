@@ -1,5 +1,4 @@
 import json
-from secrets import choice
 
 with open("finances.json", "r") as file:
     finances = json.load(file)
@@ -113,3 +112,40 @@ def menu():
 
         choice = input("Enter your choice (1-8): ")
 
+        if choice == "1":
+            show_finances(finances)
+
+        elif choice == "2":
+            add_finance(finances)
+
+        elif choice == "3":
+            name = input("Enter the name of the finance record to remove: ")
+            if remove_finance(finances, name):
+                print("Finance record removed successfully.")
+            else:
+                print("Finance record not found.")
+
+        elif choice == "4":
+            name = input("Enter the name of the finance record to find: ")
+            finance = find_finance(finances, name)
+            if finance:
+                print(f"Finance record found: Name: {finance['name']}, Type: {finance['type']}, Amount: {finance['amount']}")
+            else:
+                print("Finance record not found.")
+
+        elif choice == "5":
+            total_income = get_total_income(finances)
+            print(f"Total income: ${total_income}")
+
+        elif choice == "6":
+            total_expenses = get_total_expenses(finances)
+            print(f"Total expenses: ${total_expenses}")
+
+        elif choice == "7":
+            balance = get_balance(finances)
+            print(f"Balance: ${balance}")
+
+        elif choice == "8":
+            print("Exited...")
+        else:
+            print("Invalid choice. Please enter a number between 1 and 8.")
