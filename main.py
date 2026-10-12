@@ -97,3 +97,14 @@ def save_finances(finances):
         json.dump(finances, file, indent=4)
     print("Finances saved successfully.")
 
+def menu():
+    print("\n=== Finance Management Menu ===")
+    print("1. Show all finances")
+    print("2. Add a finance record")
+    print("3. Remove a finance record")
+    print("4. Find a finance record")
+    print("5. Get total expenses")
+    print("6. Show total expenses")
+    print("7. Show balance")
+    print("8. Exit")
+
