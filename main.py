@@ -1,4 +1,5 @@
 import json
+from secrets import choice
 
 with open("finances.json", "r") as file:
     finances = json.load(file)
@@ -98,13 +99,17 @@ def save_finances(finances):
     print("Finances saved successfully.")
 
 def menu():
-    print("\n=== Finance Management Menu ===")
-    print("1. Show all finances")
-    print("2. Add a finance record")
-    print("3. Remove a finance record")
-    print("4. Find a finance record")
-    print("5. Get total expenses")
-    print("6. Show total expenses")
-    print("7. Show balance")
-    print("8. Exit")
+    choice = ""
+    while choice != "8":
+        print("\n=== Personal Finance Management Menu ===")
+        print("1. Show all finances")
+        print("2. Add a finance record")
+        print("3. Remove a finance record")
+        print("4. Find a finance record")
+        print("5. Show total income")
+        print("6. Show total expenses")
+        print("7. Show balance")
+        print("8. Exit")
+
+        choice = input("Enter your choice (1-8): ")
 
