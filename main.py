@@ -49,7 +49,7 @@ def show_finances(finances):
         print(f"Name: {finance['name']}, Type: {finance['type']}, Amount: {finance['amount']}")
 
 def add_finance(finances):
-    name = input("Enter the name of the finance record: ")
+    name = input("Enter the name of the finance record: ").strip()
     if not name.strip():
         print("Name cannot be empty.")
         return
