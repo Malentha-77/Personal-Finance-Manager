@@ -13,5 +13,15 @@
         "name": "Food",
         "amount": 1200,
         "type": "expense"
+    },
+    {
+        "name": "Petrol",
+        "type": "expense",
+        "amount": 1500.0
+    },
+    {
+        "name": "Dividends",
+        "type": "income",
+        "amount": 4000.0
     }
 ]
